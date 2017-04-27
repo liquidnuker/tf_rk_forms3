@@ -57,7 +57,7 @@ class MainForm extends React.Component {
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.user + "\n" + this.state.email );
+    alert(this.state.user + "\n" + this.state.email );
     event.preventDefault();
   }
 
