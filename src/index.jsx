@@ -7,7 +7,7 @@ function InputName(props) {
   return (
     <div>
     <label for="username">username</label>
-    <input id="username"type={props.typez} value={props.valuez} onChange={props.onChangez} />
+    <input id="username" name="username" type={props.typez} value={props.valuez} onChange={props.onChangez} />
     </div>
   );
 }
@@ -16,8 +16,14 @@ function InputEmail(props) {
   return (
     <div>
     <label for="email">email</label>
-    <input id="email"type={props.typez} value={props.valuez} onChange={props.onChangez} />
+    <input id="email" name="email" type={props.typez} value={props.valuez} onChange={props.onChangez} />
     </div>
+  );
+}
+
+function SubmitButton(props) {
+  return (
+    <input type="submit" value="Submit" />
   );
 }
 
@@ -61,7 +67,7 @@ class MainForm extends React.Component {
         <p>user: {this.state.user} email: {this.state.email}</p>
         <InputName typez="text" valuez={this.state.user} onChangez={this.handleChange} />
         <InputEmail typez="text" valuez={this.state.email} onChangez={this.handleChange2} />
-        <input type="submit" value="Submit" />
+        <SubmitButton />
       </form>
     );
   }
