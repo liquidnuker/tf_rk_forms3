@@ -23,7 +23,7 @@ function InputEmail(props) {
 
 // main form
 // ======================================================/
-class NameForm extends React.Component {
+class MainForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -60,7 +60,7 @@ class NameForm extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <p>user: {this.state.user} email: {this.state.email}</p>
         <InputName typez="text" valuez={this.state.user} onChangez={this.handleChange} />
-        <InputName typez="text" valuez={this.state.email} onChangez={this.handleChange2} />
+        <InputEmail typez="text" valuez={this.state.email} onChangez={this.handleChange2} />
         <input type="submit" value="Submit" />
       </form>
     );
@@ -68,6 +68,6 @@ class NameForm extends React.Component {
 };
 
 ReactDOM.render(
-  <NameForm />,
+  <MainForm />,
   document.getElementById('root')
 );
